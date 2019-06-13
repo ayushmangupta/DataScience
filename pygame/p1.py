@@ -3,7 +3,7 @@ import numpy as np
 pygame.init()
 screen = pygame.display.set_mode((1180,780))
 #screen = pygame.display.set_mode((0,0),pygame.FULLSCREEN)
-screen.fill((104,187,89))
+screen.fill((3, 125, 11))
 done = False
 clock = pygame.time.Clock()
 sq_height = 93
@@ -31,26 +31,6 @@ class Board:
 board  = Board()
 # display board
 #print("board ",board.get_board())
-
-
-
-def updateScoreboard(board=board):
-    print(board)
-    unique, counts = np.unique(board.get_board(), return_counts=True) 
-    n_black = n_white = ""
-    all_count = dict(zip(unique, counts))
-    if 1.0 in all_count.keys():
-        n_black =  str(all_count[1])
-    if 0.0 in all_count.keys():
-        n_white =  str(all_count[0])
-    print(all_count.keys())
-    score = "White " + n_white+ " Black" + n_black
-    
-    
-    
-    
-
-
 
 
 
